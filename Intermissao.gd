@@ -1,6 +1,6 @@
 extends Node2D
 
-var minigames = ["res://Miniteste.tscn"]
+var minigames = ["res://Miniteste.tscn", "res://microgames/micro_1/micro_1.tscn"]
 const BOSS = "res://Bossteste.tscn"
 
 func _ready():
