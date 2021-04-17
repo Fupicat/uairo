@@ -1,9 +1,22 @@
 extends Node2D
 
-var minigames = ["res://Miniteste.tscn", "res://microgames/micro_1/micro_1.tscn"]
+const PASTA = "res://microgames/Colecao1/"
+
+var minigames = []
 const BOSS = "res://Bossteste.tscn"
 
 func _ready():
+    var dir = Directory.new()
+    if dir.open(PASTA) == OK:
+        dir.list_dir_begin()
+        var file_name = dir.get_next()
+        while file_name != "":
+            if !dir.current_is_dir():
+                minigames.append(PASTA + file_name)
+            file_name = dir.get_next()
+    else:
+        print("ERRO")
+    
     update()
     
     match Global.state:

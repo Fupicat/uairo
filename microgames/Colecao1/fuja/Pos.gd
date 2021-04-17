@@ -1,6 +1,6 @@
 extends Position2D
 
-const ENEMY = preload("res://microgames/fuja/Enemy.tscn")
+const ENEMY = preload("res://microgames/Colecao1/fuja/Enemy.tscn")
 
 func _ready():
     $Anim.playback_speed = Global.speed
